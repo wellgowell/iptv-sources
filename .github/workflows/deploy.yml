@@ -25,7 +25,7 @@ jobs:
             - run: yarn install
             - run: yarn build
             - run: yarn m3u
-            - run: yarn matrix
+            #- run: yarn matrix
 
             - name: "Jekyll theme"
               run: mv ./_config.temp.yml ./m3u/_config.yml
@@ -36,10 +36,10 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./m3u
                   enable_jekyll: true
-                  cname: <your-own-domain>
+                  cname: wellgowell.github.io/iptv-sources
 
-            - name: discord
-               uses: sebastianpopp/discord-action@releases/v2
-               with:
-                   webhook: ${{ secrets.DISCORD_WEBHOOK }}
-                   message: ${{ github.repository }} has been successfullly updated, see https://wellgowell.github.io/iptv-sources to get more.
+            #- name: discord
+             #  uses: sebastianpopp/discord-action@releases/v2
+              # with:
+               #    webhook: ${{ secrets.DISCORD_WEBHOOK }}
+                #   message: ${{ github.repository }} has been successfullly updated, see https://wellgowell.github.io/iptv-sources to get more.
