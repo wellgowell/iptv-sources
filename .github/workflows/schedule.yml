@@ -36,10 +36,10 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./m3u
                   enable_jekyll: true
-                  cname: <your-own-domain>
+                  cname: wellgowell.github.io/iptv-sources
 
             - name: discord
               uses: sebastianpopp/discord-action@releases/v2
               with:
                   webhook: ${{ secrets.DISCORD_WEBHOOK }}
-                  message: ${{ github.repository }} has been successfullly updated, see https://m3u.ibert.me to get more.
+                  message: ${{ github.repository }} has been successfullly updated, see https://wellgowell.github.io/iptv-sources to get more.
